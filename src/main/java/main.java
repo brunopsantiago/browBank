@@ -1,4 +1,5 @@
 import br.com.browbank.model.Conta;
+import br.com.browbank.model.Transferencia;
 
 
 public class main {
@@ -14,6 +15,13 @@ public class main {
         System.out.println(minhaConta.dadosConta("38585403829"));
         System.out.println(minhaConta.saldoAtual(001));
 
+
+        Transferencia transfer = new Transferencia();
+        transfer.transferir(001, 002, 10.00);
+        transfer.receberTransferencia(002, 10.00);
+
+        System.out.println(minhaConta.saldoAtual(001));
+        System.out.println(segundaConta.saldoAtual(002));
 
 
     }
